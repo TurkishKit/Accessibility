@@ -11,7 +11,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     // MARK: - UI Elements
     lazy var coffeeImageView = CoffeeImageView(frame: .zero)
-    lazy var coffeeTitleLabel = CoffeeTitleLabel(textAlignment: .center, fontSize: 30)
+    lazy var coffeeTitleLabel = CoffeeTitleLabel(textAlignment: .center, textStyle: .title1)
     lazy var coffeeDescriptionLabel = GFBodyLabel(textAlignment: .center)
     lazy var favoriteButton = FavoriteButton()
     lazy var tableView = UITableView()

@@ -11,7 +11,7 @@ class CoffeeCell: UITableViewCell {
     
     // MARK: - UI Elements
     lazy var coffeeImageView = CoffeeImageView(frame: .zero)
-    lazy var coffeeTitleLabel = CoffeeTitleLabel(textAlignment: .left, fontSize: 20)
+    lazy var coffeeTitleLabel = CoffeeTitleLabel(textAlignment: .left, textStyle: .headline)
     
     // MARK: - Properties
     static let reuseID = "CoffeeCell"
