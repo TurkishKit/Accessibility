@@ -29,5 +29,7 @@ class FavoriteButton: UIButton {
     // MARK: - Methods
     func set(isFavorite: Bool) {
         self.setTitle(isFavorite ? "Add Favorites" : "Delete Favorites", for: .normal)
+        self.accessibilityLabel = !isFavorite ? "delete favorites" : "add to favorites"
+        self.accessibilityTraits = UIAccessibilityTraits.button
     }
 }

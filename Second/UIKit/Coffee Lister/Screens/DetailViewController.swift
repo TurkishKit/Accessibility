@@ -76,8 +76,6 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         coffeeDescriptionLabel.accessibilityLabel = coffee.description
         
         favoriteButton.addTarget(self, action: #selector(addOrDeleteFavorites), for: .touchUpInside)
-        favoriteButton.accessibilityLabel = "add to favorites"
-        favoriteButton.accessibilityTraits = UIAccessibilityTraits.button
     }
     
     func configureViewController() {
