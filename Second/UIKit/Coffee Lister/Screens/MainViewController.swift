@@ -14,6 +14,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     // MARK: - Properties
     let coffees = Coffee.coffees
+    var dataStore = DataStore.shared
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -43,7 +44,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     // MARK: - TableView Data Source
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return coffees.count
+        return dataStore.getAllCoffees().count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -63,5 +64,14 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         let detailVC = DetailViewController(coffee: coffee)
         let navigationController = UINavigationController(rootViewController: detailVC)
         present(navigationController, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let action = UIContextualAction(style: .normal, title: "Delete") { [weak self] (action, view, completionHandler) in
+//            self!.dataStore.delete(coffee: self!.coffees[indexPath.row])
+            completionHandler(true)
+        }
+        action.backgroundColor = .red
+        return UISwipeActionsConfiguration(actions: [action])
     }
 }

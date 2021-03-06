@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Coffee {
+struct Coffee: Codable {
     
     // MARK: - UI Elements
     let name: String
