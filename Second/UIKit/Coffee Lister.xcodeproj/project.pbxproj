@@ -20,6 +20,8 @@
 		3A0B96B125BE9E1E0044D45C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A0B96B025BE9E1E0044D45C /* Assets.xcassets */; };
 		3A0B96B425BE9E1E0044D45C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A0B96B225BE9E1E0044D45C /* LaunchScreen.storyboard */; };
 		3A0B96C925BE9F220044D45C /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0B96C825BE9F220044D45C /* UIView+Ext.swift */; };
+		3A478E7B25F3CE7500C0865C /* coffees.json in Resources */ = {isa = PBXBuildFile; fileRef = 3A478E7A25F3CE7500C0865C /* coffees.json */; };
+		3A478E8325F3CFA300C0865C /* Bundle+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A478E8225F3CFA300C0865C /* Bundle+Ext.swift */; };
 		3ABBA37B25C3E1F700D41170 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABBA37A25C3E1F700D41170 /* UIColor+Ext.swift */; };
 		3ABBA37E25C3E58500D41170 /* OptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABBA37D25C3E58500D41170 /* OptionCell.swift */; };
 		3ABBA39825C404C300D41170 /* InstructionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABBA39725C404C300D41170 /* InstructionViewModel.swift */; };
@@ -41,6 +43,8 @@
 		3A0B96B325BE9E1E0044D45C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A0B96B525BE9E1E0044D45C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A0B96C825BE9F220044D45C /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		3A478E7A25F3CE7500C0865C /* coffees.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = coffees.json; sourceTree = "<group>"; };
+		3A478E8225F3CFA300C0865C /* Bundle+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Ext.swift"; sourceTree = "<group>"; };
 		3ABBA37A25C3E1F700D41170 /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		3ABBA37D25C3E58500D41170 /* OptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionCell.swift; sourceTree = "<group>"; };
 		3ABBA39725C404C300D41170 /* InstructionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionViewModel.swift; sourceTree = "<group>"; };
@@ -162,6 +166,7 @@
 		3A0B96C325BE9EE40044D45C /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				3A478E7A25F3CE7500C0865C /* coffees.json */,
 				3A0B96B025BE9E1E0044D45C /* Assets.xcassets */,
 				3A0B96B525BE9E1E0044D45C /* Info.plist */,
 			);
@@ -189,6 +194,7 @@
 			children = (
 				3A0B96C825BE9F220044D45C /* UIView+Ext.swift */,
 				3ABBA37A25C3E1F700D41170 /* UIColor+Ext.swift */,
+				3A478E8225F3CFA300C0865C /* Bundle+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -258,6 +264,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A478E7B25F3CE7500C0865C /* coffees.json in Resources */,
 				3A0B96B425BE9E1E0044D45C /* LaunchScreen.storyboard in Resources */,
 				3A0B96B125BE9E1E0044D45C /* Assets.xcassets in Resources */,
 			);
@@ -282,6 +289,7 @@
 				3A0B96A825BE9E1D0044D45C /* AppDelegate.swift in Sources */,
 				3A0B96AA25BE9E1D0044D45C /* SceneDelegate.swift in Sources */,
 				3ABBA37B25C3E1F700D41170 /* UIColor+Ext.swift in Sources */,
+				3A478E8325F3CFA300C0865C /* Bundle+Ext.swift in Sources */,
 				3A0B3AFB25C35B150019C646 /* FavoriteButton.swift in Sources */,
 				3A0B3AEC25C33CAD0019C646 /* Coffee.swift in Sources */,
 			);
@@ -433,7 +441,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "canbalkaya.Coffee-Lister";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -453,7 +461,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "canbalkaya.Coffee-Lister";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

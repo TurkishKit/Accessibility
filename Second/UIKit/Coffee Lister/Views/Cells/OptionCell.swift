@@ -20,12 +20,15 @@ class OptionCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
+        checkmarkButton.sizeToFit()
+        checkmarkButton.imageView?.sizeToFit()
         checkmarkButton.isAccessibilityElement = true
         checkmarkButton.accessibilityTraits = UIAccessibilityTraits.button
         checkmarkButton.clipsToBounds = true
         checkmarkButton.translatesAutoresizingMaskIntoConstraints = false
         addSubview(checkmarkButton)
         
+        descriptionLabel.font = UIFont.preferredFont(forTextStyle: .headline)
         descriptionLabel.isAccessibilityElement = true
         descriptionLabel.clipsToBounds = true
         descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -59,7 +62,9 @@ class OptionCell: UITableViewCell {
             descriptionLabel.accessibilityLabel = "Uncompleted: \(text)"
         }
       
-        let buttonImage = UIImage(systemName: strikeThrough ? "checkmark.square.fill" : "checkmark.square")
+        let font = UIFont.preferredFont(forTextStyle: .headline)
+        let configuration = UIImage.SymbolConfiguration(font: font)
+        let buttonImage = UIImage(systemName: strikeThrough ? "checkmark.square.fill" : "checkmark.square", withConfiguration: configuration)
         checkmarkButton.setImage(buttonImage, for: .normal)
         descriptionLabel.attributedText = attributeString
     }
@@ -68,5 +73,12 @@ class OptionCell: UITableViewCell {
     func set(option: String, status: Bool) {
         checkmarkButton.setImage(UIImage(systemName: status ? "checkmark.square.fill" : "checkmark.square")!, for: .normal)
         descriptionLabel.text = option
+    }
+    
+    func prepareImage() {
+//        let font = UIFont.preferredFont(forTextStyle: .headline)
+//        let configuration = UIImage.SymbolConfiguration(font: font)
+//        let buttonImage = UIImage(systemName: strikeThrough ? "checkmark.square.fill" : "checkmark.square", withConfiguration: configuration)
+//        checkmarkButton.setImage(buttonImage, for: .normal)
     }
 }
