@@ -49,6 +49,6 @@ class CoffeeCell: UITableViewCell {
     func set(coffee: Coffee) {
         coffeeImageView.image = UIImage(named: coffee.name)
         coffeeTitleLabel.text = coffee.name
-        coffeeTitleLabel.accessibilityLabel = "Coffee Name is \(coffee.name)"
+        self.accessibilityLabel = "Coffee Name is \(coffee.name)"
     }
 }
