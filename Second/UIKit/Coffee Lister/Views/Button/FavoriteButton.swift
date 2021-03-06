@@ -15,7 +15,7 @@ class FavoriteButton: UIButton {
         
         layer.cornerRadius = 10
         setTitle("Add Favorites", for: .normal)
-        titleLabel?.font = UIFont.preferredFont(forTextStyle: .title3)
+        titleLabel?.font = UIFont.boldSystemFont(ofSize: 21)
         backgroundColor = .darkGreen
         tintColor = .white
         
