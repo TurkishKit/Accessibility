@@ -87,12 +87,12 @@
 			path = Labels;
 			sourceTree = "<group>";
 		};
-		3A0B3AF925C35B050019C646 /* Button */ = {
+		3A0B3AF925C35B050019C646 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
 				3A0B3AFA25C35B150019C646 /* FavoriteButton.swift */,
 			);
-			path = Button;
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 		3A0B969B25BE9E1D0044D45C = {
@@ -155,7 +155,7 @@
 		3A0B96C225BE9EDD0044D45C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				3A0B3AF925C35B050019C646 /* Button */,
+				3A0B3AF925C35B050019C646 /* Buttons */,
 				3A0B3AE025C3335D0019C646 /* Cells */,
 				3A0B3AEE25C343BF0019C646 /* Labels */,
 				3A0B3AE525C333E40019C646 /* ImageViews */,
